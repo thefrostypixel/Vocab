@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vokabeln</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="icon" href="logo.svg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preload" href="font.otf" as="font" crossorigin>
+    </head>
+    <body>
+        <header select-unit>
+            <h1 id="header-title">Einheiten</h1>
+        </header>
+        <main>
+            <center id="select-unit"><h1>Lade...</h1></center>
+            <center id="select-tests">
+                <h2>Anzahl der Vokabeln</h2>
+                <button class="count" onclick="selectCount(5)">5</button><button class="count" onclick="selectCount(10)">10</button><button class="count" onclick="selectCount(15)">15</button><button class="count" onclick="selectCount(20)">20</button><button class="count" onclick="selectCount(25)">25</button><button class="count" onclick="selectCount(Infinity)">Alle</button>
+                <h2>Übungen</h2>
+                <button class="test" onclick="toggleTest(this.innerText);">Auswählen</button>
+                <!--<button class="test" onclick="toggleTest(this.innerText);">Kombinieren</button>-->
+                <!--<button class="test" onclick="toggleTest(this.innerText);">Buchstaben</button>-->
+                <button class="test" onclick="toggleTest(this.innerText);">Schreiben</button>
+                <footer>
+                    <button id="select-tests-continue-button" onclick="startUnit();" disabled>Anfangen</button>
+                </footer>
+            </center>
+            <center id="test-select"></center>
+            <!--<center id="test-combine"></center>-->
+            <!--<center id="test-letters"></center>-->
+            <center id="test-spell"></center>
+            <center id="well-done"></center>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>
