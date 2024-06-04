@@ -172,7 +172,7 @@ function startUnit() {
 }
 function testSelect(index) {
     document.querySelector("header").outerHTML = "<header test-select><button id=\"back\" onclick=\"selectTests();\">􀯶</button><h1 id=\"header-title\">Auswählen</h1></header>";
-    let html = "<h2>" + unitData[currentVocabs[index]].source_expression + "</h2>";
+    let html = "<h2>" + unitData[currentVocabs[index]].from + "</h2>";
     let correctButton = Math.floor(Math.random() * Math.min(3, currentVocabs.length));
     let wrong = undefined;
     for (let i = 0; i < Math.min(3, currentVocabs.length); i++) {
@@ -189,9 +189,9 @@ function testSelect(index) {
             } else {
                 html += "showWellDone();";
             }
-            html += "\">" + unitData[currentVocabs[index]].target_expression + "</button>";
+            html += "\">" + unitData[currentVocabs[index]].to + "</button>";
         } else {
-            html += "<button class=\"option\" onclick=\"if (currentProgress['Auswählen'][" + index + "] == undefined) currentProgress['Auswählen'].push(false); this.style.background = '#844';\">" + unitData[currentVocabs[wrong = random(currentVocabs.length, [index, wrong])]].target_expression + "</button>";
+            html += "<button class=\"option\" onclick=\"if (currentProgress['Auswählen'][" + index + "] == undefined) currentProgress['Auswählen'].push(false); this.style.background = '#844';\">" + unitData[currentVocabs[wrong = random(currentVocabs.length, [index, wrong])]].to + "</button>";
         }
     }
     document.getElementById("test-select").innerHTML = html;
@@ -200,11 +200,11 @@ function testCombine(index) /* TODO */ {}
 function testLetters(index) /* TODO */ {}
 function testSpell(index) /* TODO */ {
     document.querySelector("header").outerHTML = "<header test-spell><button id=\"back\" onclick=\"selectTests();\">􀯶</button><h1 id=\"header-title\">Schreiben</h1></header>";
-    document.getElementById("test-spell").innerHTML = "<h2>" + unitData[currentVocabs[index]].source_expression + "</h2><input id=\"test-spell-input\" enterkeyhint=\"next\" autocapitalize=\"off\" spellcheck=\"false\" onkeydown=\"if (event.key == 'Enter') testSpellVerify(" + index + ");\"><a id=\"test-spell-correct-title\"></a><h2 id=\"test-spell-correct-answer\"></h2><footer><button id=\"test-spell-continue-button\" onclick=\"testSpellVerify(" + index + ");\">Weiter</button></footer>";
+    document.getElementById("test-spell").innerHTML = "<h2>" + unitData[currentVocabs[index]].from + "</h2><input id=\"test-spell-input\" enterkeyhint=\"next\" autocapitalize=\"off\" spellcheck=\"false\" onkeydown=\"if (event.key == 'Enter') testSpellVerify(" + index + ");\"><a id=\"test-spell-correct-title\"></a><h2 id=\"test-spell-correct-answer\"></h2><footer><button id=\"test-spell-continue-button\" onclick=\"testSpellVerify(" + index + ");\">Weiter</button></footer>";
     document.getElementById("test-spell-input").focus();
 }
 function testSpellVerify(index) {
-    if (document.getElementById("test-spell-input").value == unitData[currentVocabs[index]].target_expression) {
+    if (document.getElementById("test-spell-input").value == unitData[currentVocabs[index]].to) {
         currentProgress["Schreiben"].push(true);
         if (index == currentVocabs.length - 1) {
             showWellDone();
@@ -216,7 +216,7 @@ function testSpellVerify(index) {
         // TODO Add A Button To Count It As Correct
         document.getElementById("test-spell-input").setAttribute("disabled", "");
         document.getElementById("test-spell-correct-title").innerText = "Richtige Antwort:";
-        document.getElementById("test-spell-correct-answer").innerHTML = compareStrings(document.getElementById("test-spell-input").value, unitData[currentVocabs[index]].target_expression);
+        document.getElementById("test-spell-correct-answer").innerHTML = compareStrings(document.getElementById("test-spell-input").value, unitData[currentVocabs[index]].to);
         if (index == currentVocabs.length - 1) {
             document.getElementById("test-spell-continue-button").setAttribute("onclick", "showWellDone();");
             document.getElementById("test-spell-input").setAttribute("onkeydown", "if (event.key == 'Enter') { document.getElementById('test-spell-input').blur(); showWellDone(); }");
@@ -253,7 +253,7 @@ function showWellDone() {
                 html += "<td style=\"color: #FAA;\">􀆄</td>";
             }
         }
-        html += "<td>" + unitData[currentVocabs[i]].source_expression + "</td></tr>";
+        html += "<td>" + unitData[currentVocabs[i]].from + "</td></tr>";
     }
     document.getElementById("well-done").innerHTML = html + "</tbody></table><footer><button id=\"test-spell-continue-button\" onclick=\"selectTests();\">Fertig</button></footer>";
 }
