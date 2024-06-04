@@ -1,6 +1,156 @@
 [
   {
-    "from": "Eingabe",
-    "to": "Ausgabe"
+    "from": "mir gefällt",
+    "to": "me gusta"
+  },
+  {
+    "from": "mir gefällt",
+    "to": "me encanta"
+  },
+  {
+    "from": "ich hasse",
+    "to": "odio"
+  },
+  {
+    "from": "ich ertrage",
+    "to": "soporto"
+  },
+  {
+    "from": "mir ist egal",
+    "to": "me da igual"
+  },
+  {
+    "from": "ich habe es satt",
+    "to": "estoy harto de"
+  },
+  {
+    "from": "ich habe keine Angst",
+    "to": "tengo miedo de"
+  },
+  {
+    "from": "ich bin traurig",
+    "to": "estoy triste"
+  },
+  {
+    "from": "ich bin zufrieden",
+    "to": "estoy contento"
+  },
+  {
+    "from": "es stört mich",
+    "to": "me molesta"
+  },
+  {
+    "from": "es überrascht mich",
+    "to": "me sorprende"
+  },
+  
+  {
+    "from": "ich will",
+    "to": "quiero"
+  },
+  {
+    "from": "ich wünsche",
+    "to": "deseo"
+  },
+  {
+    "from": "ich hoffe",
+    "to": "espero"
+  },
+  {
+    "from": "ich bitte dich",
+    "to": "te pido"
+  },
+  {
+    "from": "mir wäre lieber",
+    "to": "prefiero"
+  },
+  {
+    "from": "ich schlage vor",
+    "to": "propongo"
+  },
+  {
+    "from": "ich empfehle dir",
+    "to": "te recomiendo"
+  },
+  
+  {
+    "from": "ausgehen",
+    "to": "ir de fiesta"
+  },
+  {
+    "from": "fröhlich",
+    "to": "alegre"
+  },
+  {
+    "from": "höchstens",
+    "to": "como mucho"
+  },
+  {
+    "from": "die Motivation",
+    "to": "la motivación"
+  },
+  {
+    "from": "vor sllem",
+    "to": "sobre todo"
+  },
+  {
+    "from": "das Aussehen",
+    "to": "la imagen"
+  },
+  {
+    "from": "die Tasche",
+    "to": "el bolso"
+  },
+  {
+    "from": "der Ring",
+    "to": "el anillo"
+  },
+  {
+    "from": "die Uhr",
+    "to": "el reloj"
+  },
+  {
+    "from": "die Halskette",
+    "to": "el collar"
+  },
+  {
+    "from": "offen",
+    "to": "abierto"
+  },
+  {
+    "from": "kontaktfreudig/gesprächig",
+    "to": "hablador, -a"
+  },
+  {
+    "from": "rebellisch",
+    "to": "rebelde"
+  },
+  {
+    "from": "selbstsicher",
+    "to": "seguro,-a de si mismo,-a"
+  },
+  {
+    "from": "unsympatisch",
+    "to": "antipático"
+  },
+  {
+    "from": "unabhängig",
+    "to": "independiente"
+  },
+  {
+    "from": "aktiv",
+    "to": "activo,-a"
+  },
+  {
+    "from": "sportlich",
+    "to": "deportista"
+  },
+  {
+    "from": "abenteuerlustig",
+    "to": "aventurero,-a"
+  },
+  {
+    "from": "die Freundschaft",
+    "to": "la amistad"
   },
 ]
