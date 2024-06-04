@@ -168,6 +168,8 @@ function startUnit() {
         testLetters(0);
     } else if (options.tests["Schreiben"]) {
         testSpell(0);
+    } else {
+        alert("Could not start because no units are selected!");
     }
 }
 function testSelect(index) {
