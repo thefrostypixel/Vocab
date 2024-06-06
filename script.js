@@ -80,7 +80,7 @@ function selectTests() {
     saveOptions();
     document.querySelector("header").outerHTML = "<header select-tests><button id=\"back\" onclick=\"selectUnit();\">􀯶</button><h1 id=\"header-title\">Optionen</h1></header>";
     document.querySelectorAll(".count").forEach(b => {
-        if (b.innerText == options.count || (b.innerText == "Alle" && options.count == Infinity)) {
+        if (b.innerText == options.count || (b.innerText == "Alle" && options.count == 0)) {
             b.setAttribute("style", "transition-duration: 0s; background-color: #484;");
             b.getBoundingClientRect();
             b.setAttribute("style", "background-color: #484;");
@@ -155,7 +155,7 @@ function startUnit() {
         let j = Math.floor(Math.random() * (i + 1));
         [currentVocabs[i], currentVocabs[j]] = [currentVocabs[j], currentVocabs[i]];
     }
-    currentVocabs.splice(options.count);
+    currentVocabs.splice(options.count == 0 ? currentVocabs.length : options.count);
     currentProgress = {
         "Auswählen": [],
         "Schreiben": []
@@ -168,8 +168,6 @@ function startUnit() {
         testLetters(0);
     } else if (options.tests["Schreiben"]) {
         testSpell(0);
-    } else {
-        alert("Could not start because no units are selected!");
     }
 }
 function testSelect(index) {
