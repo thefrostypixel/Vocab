@@ -1,0 +1,122 @@
+[
+    {
+        "from": "geteilt",
+        "to": "divide"
+    },
+    {
+        "from": "Szene",
+        "to": "escena"
+    },
+    {
+        "from": "zeigen",
+        "to": "muestra"
+    },
+    {
+        "from": "vergleichen",
+        "to": "compara"
+    },
+    {
+        "from": "Menschen",
+        "to": "personas"
+    },
+    {
+        "from": "im oberen Teil",
+        "to": "en el parte superior"
+    },
+    {
+        "from": "im unteren Teil",
+        "to": "en el parte inferior"
+    },
+    {
+        "from": "im linken Teil",
+        "to": "en el lado izquierdo"
+    },
+    {
+        "from": "im rechten Teil",
+        "to": "en el lado derecho"
+    },
+    {
+        "from": "interagieren",
+        "to": "interactuando"
+    },
+    {
+        "from": "geteilt",
+        "to": "dividida"
+    },
+    {
+        "from": "oberer Teil",
+        "to": "parte superior"
+    },
+    {
+        "from": "unterer Teil",
+        "to": "parte inferior"
+    },
+    {
+        "from": "vor 15 Jahren",
+        "to": "hace 15 años"
+    },
+    {
+        "from": "vor 15 Minuten",
+        "to": "hace 15 minutos"
+    },
+    {
+        "from": "interagieren",
+        "to": "interactuar"
+    },
+    {
+        "from": "Umgebung",
+        "to": "entorno"
+    },
+    {
+        "from": "Verhalten",
+        "to": "comportamiento"
+    },
+    {
+        "from": "glücklich",
+        "to": "feliz"
+    },
+    {
+        "from": "genervt",
+        "to": "molesta"
+    },
+    {
+        "from": "verbunden",
+        "to": "conectado"
+    },
+    {
+        "from": "abgelenkt",
+        "to": "desconectado"
+    },
+    {
+        "from": "Handy",
+        "to": "teléfono móvil"
+    },
+    {
+        "from": "Tablet",
+        "to": "tableta"
+    },
+    {
+        "from": "Technologie",
+        "to": "tecnología"
+    },
+    {
+        "from": "Gewohnheiten",
+        "to": "costumbres"
+    },
+    {
+        "from": "menschliche Beziehungen",
+        "to": "relaciones humanas"
+    },
+    {
+        "from": "sozial",
+        "to": "social"
+    },
+    {
+        "from": "Isolation",
+        "to": "aislamiento"
+    },
+    {
+        "from": "spiegelt",
+        "to": "refleja"
+    }
+]

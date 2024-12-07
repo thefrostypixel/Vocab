@@ -2,11 +2,17 @@
     "Deutsch zu Spanisch": {
         "¡Vamos! ¡Adelante!": {
             "Unidad 3": "Deutsch-Spanisch/Vamos-Adelante/Unidad-3"
+        },
+        "Anderes": {
+            "Einheit 1": "Deutsch-Spanisch/Anderes/Einheit-1"
         }
     },
     "Spanisch zu Deutsch": {
         "¡Vamos! ¡Adelante!": {
             "Unidad 3": "Spanisch-Deutsch/Vamos-Adelante/Unidad-3"
+        },
+        "Anderes": {
+            "Einheit 1": "Spanisch-Deutsch/Anderes/Einheit-1"
         }
     }
 }

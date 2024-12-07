@@ -4,7 +4,7 @@
     "to": "me gusta"
   },
   {
-    "from": "mir gefällt sehr",
+    "from": "mir gefällt",
     "to": "me encanta"
   },
   {
@@ -24,7 +24,7 @@
     "to": "estoy harto de"
   },
   {
-    "from": "ich habe Angst",
+    "from": "ich habe keine Angst",
     "to": "tengo miedo de"
   },
   {
@@ -43,7 +43,7 @@
     "from": "es überrascht mich",
     "to": "me sorprende"
   },
-  
+
   {
     "from": "ich will",
     "to": "quiero"
@@ -72,7 +72,7 @@
     "from": "ich empfehle dir",
     "to": "te recomiendo"
   },
-  
+
   {
     "from": "ausgehen",
     "to": "ir de fiesta"
@@ -90,7 +90,7 @@
     "to": "la motivación"
   },
   {
-    "from": "vor allem",
+    "from": "vor sllem",
     "to": "sobre todo"
   },
   {
@@ -119,7 +119,7 @@
   },
   {
     "from": "kontaktfreudig/gesprächig",
-    "to": "hablador,-a"
+    "to": "hablador, -a"
   },
   {
     "from": "rebellisch",
@@ -127,7 +127,7 @@
   },
   {
     "from": "selbstsicher",
-    "to": "seguro,-a de sí mismo,-a"
+    "to": "seguro,-a de si mismo,-a"
   },
   {
     "from": "unsympatisch",

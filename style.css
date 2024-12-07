@@ -137,21 +137,23 @@ input[disabled] {
     content: "􀆈";
 }
 .select-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.select-menu div {
     background: #333;
     border-radius: 25px;
     border: 5px solid #333;
     outline: 1px solid #888;
     display: block;
-    position: absolute;
-    width: min(488px, 100vw - 12px);
+    position: fixed;
     overflow: scroll;
-    transform: translate(1px, -73px);
+    transform: translate(-5px, -5px);
     transition-duration: .1s;
     transition-property: opacity;
-}
-.select:not(:focus) + .select-menu:not(:focus-within) {
-    opacity: 0;
-    pointer-events: none;
 }
 .select-menu button {
     border-radius: 5px;

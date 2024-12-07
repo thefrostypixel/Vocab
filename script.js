@@ -29,6 +29,29 @@ function loadOptions() {
     }
 }
 
+function selectMenu(button, options, onSelect) {
+    let selectMenu = document.createElement("div");
+    selectMenu.className = "select-menu";
+    selectMenu.onclick = () => document.body.removeChild(selectMenu);
+    let selectMenuOptions = document.createElement("div");
+    selectMenuOptions.style.left = button.getBoundingClientRect().x + "px";
+    selectMenuOptions.style.top =  button.getBoundingClientRect().y + "px";
+    selectMenuOptions.style.width = button.getBoundingClientRect().width + "px";
+    selectMenuOptions.style.maxHeight = "max(100vh - 88px - " + button.getBoundingClientRect().y + "px, min(100vh - 6px - " + button.getBoundingClientRect().y + "px, 250px))";
+    for (let i of options) {
+        let selectMenuOption = document.createElement("button");
+        selectMenuOption.innerText = i;
+        selectMenuOption.onclick = event => {
+            onSelect(i);
+            document.body.removeChild(selectMenu);
+            event.stopPropagation();
+        };
+        selectMenuOptions.appendChild(selectMenuOption);
+    }
+    selectMenu.appendChild(selectMenuOptions);
+    document.body.appendChild(selectMenu);
+}
+
 function loadUnits() {
     fetch("units/index.json").then(r => r.text()).then(d => {
         try {
@@ -56,25 +79,26 @@ function selectUnit() {
     if (units[options.sel.lang][options.sel.group][options.sel.unit] == undefined) {
         options.sel.unit = Object.keys(units[options.sel.lang][options.sel.group])[0];
     }
-    let html = "<h2>Sprache</h2><button class=\"select\"><a>" + options.sel.lang + "</a></button><div class=\"select-menu\"><button onclick=\"selectUnit();\">" + options.sel.lang + "</button>";
+
+    let html = "<h2>Sprache</h2><button class=\"select\" onclick=\"selectMenu(this, ['" + options.sel.lang + "'";
     for (let lang in units) {
         if (lang != options.sel.lang) {
-            html += "<button onclick=\"options.sel.lang = this.innerText; selectUnit();\">" + lang + "</button>";
+            html += ",'" + lang + "'";
         }
     }
-    /*html += "</div><h2>Gruppe</h2><button class=\"select\"><a>" + options.sel.group + "</a></button><div class=\"select-menu\"><button onclick=\"selectUnit();\">" + options.sel.group + "</button>";
+    html += "], selected => {options.sel.lang = selected; selectUnit();})\"><a>" + options.sel.lang + "</a></button></div><h2>Gruppe</h2><button class=\"select\" onclick=\"selectMenu(this, ['" + options.sel.group + "'";
     for (let group in units[options.sel.lang]) {
         if (group != options.sel.group) {
-            html += "<button onclick=\"options.sel.group = this.innerText; selectUnit();\">" + group + "</button>";
-        }
-    }*/
-    html += "</div><h2>Einheit</h2><button class=\"select\"><a>" + options.sel.unit + "</a></button><div class=\"select-menu\"><button onclick=\"selectUnit();\">" + options.sel.unit + "</button>";
-    for (let unit in units[options.sel.lang][options.sel.group]) {
-        if (unit != options.sel.unit) {
-            html += "<button onclick=\"options.sel.unit = this.innerText; selectUnit();\">" + unit + "</button>";
+            html += ",'" + group + "'";
         }
     }
-    document.getElementById("select-unit").innerHTML = html + "</div><footer><button id=\"select-unit-continue-button\" onclick=\"selectTests();\">Weiter</button></footer>";
+    html += "], selected => {options.sel.group = selected; selectUnit();})\"><a>" + options.sel.group + "</a></button></div><h2>Einheit</h2><button class=\"select\" onclick=\"selectMenu(this, ['" + options.sel.unit + "'";
+    for (let unit in units[options.sel.lang][options.sel.group]) {
+        if (unit != options.sel.unit) {
+            html += ",'" + unit + "'";
+        }
+    }
+    document.getElementById("select-unit").innerHTML = html + "], selected => {options.sel.unit = selected; selectUnit();})\"><a>" + options.sel.unit + "</a></button></div><footer><button id=\"select-unit-continue-button\" onclick=\"selectTests();\">Weiter</button></footer>";
 }
 function selectTests() {
     saveOptions();
